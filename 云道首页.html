@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>运道首页</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #fafafa;
+            height: 5000px;
+        }
+
+        .z {
+            float: left;
+        }
+
+        .y {
+            float: right;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .top {
+            height: 100px;
+            background: #ffffff;
+        }
+
+        .top .topnav {
+            width: 1200px;
+            height: 100px;
+            /*background-color: #7d2437;*/
+            margin: 0 auto;
+        }
+
+        .top .nav ul {
+            line-height: 100px;
+        }
+
+        .top .nav li {
+            display: inline-block;
+            padding: 0 15px;
+        }
+
+        .top li a {
+            text-decoration: none;
+            color: #333333;
+        }
+
+        .top li a:hover {
+            color: #2288f6;
+        }
+
+        /*banner图*/
+        .banner {
+            height: 620px;
+            text-align: center;
+        }
+
+        .center {
+            /*width: 960px;*/
+            margin: 64px auto 0;
+        }
+
+        .server {
+            width: 960px;
+            border-top: 1px solid #cccccc;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .server img {
+
+            margin-top: -20px;
+        }
+
+        .server span {
+            font-size: 14px;
+            color: #666666;
+            margin: 28px 14px 50px;
+        }
+
+        .center .ser {
+            width: 960px;
+            height: 510px;
+            margin: 20px auto 0;
+            /*background-color: #7d2437;*/
+        }
+
+        .ser .left {
+            width: 310px;
+            height: 510px;
+            /*background-color: #202026;*/
+            margin-right: 10px;
+            position: relative;
+            background: #fff;
+        }
+
+        .ser img {
+            horiz-align: center;
+            padding-top: 40px;
+            padding-left: 39px;
+        }
+
+        .ser .scenter {
+            width: 310px;
+            height: 510px;
+            /*background-color: #1a2619;*/
+            margin-right: 10px;
+            background: #fff;
+        }
+
+        .ser .you {
+            width: 320px;
+            height: 510px;
+            /*background-color: #1d2226;*/
+            background: #fff;
+        }
+
+        .ser a {
+            display: inline-block;
+            color: #ff9412;
+            background: #efd8ff;
+            text-decoration: none;
+        }
+
+        .ser a:hover p {
+            color: #cccccc;
+            background-color: #ff9412;
+        }
+
+        .jindiananni {
+            width: 100%;
+            height: 430px;
+            background-color: #fff;
+            margin-top: 60px;
+            position: relative;
+        }
+
+        .jdan {
+            width: 920px;
+            height: 80px;
+            margin: 0 auto;
+            /*background-color: coral;*/
+            padding: 40px 20px 0;
+        }
+
+        .jdan h3 {
+            border-top: 1px solid #ccc;
+            text-align: center;
+        }
+
+        .jdan h3 img {
+            margin-top: -18px;
+            /*text-align: center;*/
+        }
+
+        .jindiananni .huad {
+            width: 920px;
+            height: 230px;
+            /*background-color: #7d2437;*/
+            margin: 0 auto;
+        }
+
+        .jleft {
+            width: 300px;
+            height: 211px;
+            background-color: #00497d;
+            margin-right: 10px;
+            margin-top: 10px;
+        }
+
+        .jcenter {
+            width: 300px;
+            height: 211px;
+            background-color: #437d72;
+            margin-right: 10px;
+            margin-top: 10px;
+        }
+
+        .jyou {
+            width: 300px;
+            height: 211px;
+            background-color: #e4ffa3;
+            margin-top: 10px;
+        }
+
+        .jleft a {
+            width: 300px;
+            height: 211px;
+            display: block;
+            position: relative;
+        }
+
+        .jcenter a {
+            width: 300px;
+            height: 211px;
+            display: block;
+            position: relative;
+        }
+
+        .jyou a {
+            width: 300px;
+            height: 211px;
+            display: block;
+            position: relative;
+        }
+
+        .mark {
+            width: 300px;
+            height: 211px;
+            display: none;
+            background: rgba(64, 63, 65, 0.7) url("fdj.png") no-repeat center;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .jleft a:hover .mark {
+            display: block;
+        }
+
+        .jcenter a:hover .mark {
+            display: block;
+        }
+
+        .jyou a:hover .mark {
+            display: block;
+        }
+
+        .tisy {
+            height: 48px;
+            width: 300px;
+            background-color: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            font-size: 14px;
+            color: #ebeaeb;
+            line-height: 48px;
+            text-align: center;
+        }
+
+        .arrl a {
+            width: 45px;
+            height: 45px;
+            display: block;
+            background-color: #ccc;
+            color: #fff;
+            margin: 10px;
+            border-radius: 50%;
+            line-height: 45px;
+            text-align: center;
+            text-decoration: none;
+            position: absolute;
+            left: 20%;
+            bottom: 40%;
+
+        }
+
+        .arrl a:hover {
+            background-color: #0077ca;
+        }
+
+        .arr2 a {
+            width: 45px;
+            height: 45px;
+            display: block;
+            background-color: #ccc;
+            color: #fff;
+            margin: 10px;
+            border-radius: 50%;
+            line-height: 45px;
+            text-align: center;
+            text-decoration: none;
+            position: absolute;
+            right: 20%;
+            bottom: 40%;
+            font-weight: 700;
+        }
+
+        .arr2 a:hover {
+            background-color: #0077ca;
+        }
+
+        .center .taobao {
+            width: 960px;
+            height: 420px;
+            margin: 0 auto;
+            /*background-color: #76adf8;*/
+        }
+
+        .meiti {
+            margin-top: 64px;
+            border-top: 1px solid #ccc;
+            text-align: center;
+        }
+
+        .meiti img {
+            margin-top: -15px;
+        }
+        .meiti ul{
+            list-style: none;
+            display: inline-block;
+            margin-top: 50px;
+
+        }
+        .meiti li{
+            border-bottom: 1px dashed #ccc;
+        }
+        .meiti li img{
+            padding: 35px 40px;
+
+        }
+    </style>
+</head>
+<body>
+<div class="top">
+    <div class="topnav">
+        <div class="logo z">
+            <img src="logo.png" alt="">
+        </div>
+        <div class="nav y">
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">云到商城</a></li>
+                <li><a href="#">智慧门店</a></li>
+                <li><a href="#">营销平台</a></li>
+                <li><a href="#">媒体联盟</a></li>
+                <li><a href="#">关于云道</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="banner">
+    <a href="#"><img src="banner.jpg" alt=""></a>
+</div>
+<div class="center">
+    <div class="server">
+        <img src="ser.png" alt=""><br>
+        <span>shopcmd云道，国内领先的独立电商解决方案及全渠道营销平台。完整的产品体系，简约的系统，个性化前端，全覆盖多渠道营销体系... 我们致力于打造一个服务于品牌商城/独立电商的完整生态，让企业的独立电商之路变得更简单，也更有价值！</span>
+    </div>
+    <div class="ser">
+        <div class="left z">
+            <img src="icon1.png" alt=""><br>
+            <p style="text-align: center;margin-top: 20px">我是卖家</p>
+            <p style="margin: 30px 30px;">shopcmd云电商解决方案，我们不仅仅是领先的独立商城建站系统。我们 从互联网时代品牌建设和品牌营销的全 新视角，赋予了品牌商城及独立电商更
+                大的生存空间和存在价值！</p>
+            <a href="#"><p
+                    style="width: 150px;height: 38px;border: 1px solid #ff9412;text-align: center;line-height: 38px;position: absolute;left: 25%;border-radius: 8px;">
+                我要建站</p></a>
+        </div>
+        <div class="scenter z">
+            <img src="icon1.png" alt=""><br>
+            <p style="text-align: center;margin-top: 20px">我是卖家</p>
+            <p style="margin: 30px 30px;">shopcmd云电商解决方案，我们不仅仅是领先的独立商城建站系统。我们 从互联网时代品牌建设和品牌营销的全 新视角，赋予了品牌商城及独立电商更
+                大的生存空间和存在价值！</p>
+            <a href="#"><p
+                    style="width: 150px;height: 38px;border: 1px solid #ff9412;text-align: center;line-height: 38px;position: absolute;left: 46%;border-radius: 8px;">
+                我要建站</p></a>
+        </div>
+        <div class="you z">
+            <img src="icon1.png" alt=""><br>
+            <p style="text-align: center;margin-top: 20px">我是卖家</p>
+            <p style="margin: 30px 35px;">shopcmd云电商解决方案，我们不仅仅是领先的独立商城建站系统。我们 从互联网时代品牌建设和品牌营销的全 新视角，赋予了品牌商城及独立电商更
+                大的生存空间和存在价值！</p>
+            <a href="#"><p
+                    style="width: 150px;height: 38px;border: 1px solid #ff9412;text-align: center;line-height: 38px;position: absolute;left: 62%;border-radius: 8px;">
+                我要建站</p></a>
+        </div>
+    </div>
+    <div class="jindiananni">
+        <div class="jdan">
+            <h3><img src="case.png" alt=""></h3>
+        </div>
+        <div class="huad">
+            <div class="jleft z">
+                <a href="#">
+                    <img src="pro.png" alt="" width="300" height="211">
+                    <div class="tisy">
+                        帮助中小企业快速开启阿萨德打撒电子商务
+                    </div>
+                    <div class="mark"></div>
+                </a>
+            </div>
+            <div class="jcenter z">
+                <a href="#">
+                    <img src="pro.png" alt="" width="300" height="211">
+                    <div class="tisy">
+                        帮助中小企业快速开启阿萨德打撒电子商务
+                    </div>
+                    <div class="mark"></div>
+                </a>
+            </div>
+            <div class="jyou z">
+                <a href="#">
+                    <img src="pro.png" alt="" width="300" height="211">
+                    <div class="tisy">
+                        帮助中小企业快速开启阿萨德打撒电子商务
+                    </div>
+                    <div class="mark"></div>
+                </a>
+            </div>
+        </div>
+        <div class="arrl">
+            <a href="#">
+                <p><</p>
+            </a>
+        </div>
+        <div class="arr2">
+            <a href="#">
+                <p>></p>
+            </a>
+        </div>
+    </div>
+    <div class="taobao">
+        <div class="meiti">
+            <img src="ser.png" alt="">
+            <ul>
+                <li>
+                    <a href="#"><img src="tb.png" alt=""></a>
+                    <a href="#"><img src="tb.png" alt=""></a>
+                    <a href="#"><img src="tb.png" alt=""></a>
+                    <a href="#"><img src="tb.png" alt=""></a>
+                    <a href="#"><img src="tb.png" alt=""></a>
+                </li>
+                <li>
+                    <a href="#"><img src="tb.png" alt=""></a>
+                    <a href="#"><img src="tb.png" alt=""></a>
+                    <a href="#"><img src="tb.png" alt=""></a>
+                    <a href="#"><img src="tb.png" alt=""></a>
+                    <a href="#"><img src="tb.png" alt=""></a>
+                </li>
+                <li>
+                    <a href="#"><img src="tb.png" alt=""></a>
+                    <a href="#"><img src="tb.png" alt=""></a>
+                    <a href="#"><img src="tb.png" alt=""></a>
+                    <a href="#"><img src="tb.png" alt=""></a>
+                    <a href="#"><img src="tb.png" alt=""></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>
